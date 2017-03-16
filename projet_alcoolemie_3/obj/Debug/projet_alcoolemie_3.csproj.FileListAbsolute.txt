@@ -1,0 +1,11 @@
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_3\projet_alcoolemie_3\bin\Debug\projet_alcoolemie_3.exe.config
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_3\projet_alcoolemie_3\bin\Debug\projet_alcoolemie_3.exe
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_3\projet_alcoolemie_3\bin\Debug\projet_alcoolemie_3.pdb
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_3\projet_alcoolemie_3\obj\Debug\projet_alcoolemie_3.csprojResolveAssemblyReference.cache
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_3\projet_alcoolemie_3\obj\Debug\projet_alcoolemie_3.MainView.resources
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_3\projet_alcoolemie_3\obj\Debug\projet_alcoolemie_3.Properties.Resources.resources
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_3\projet_alcoolemie_3\obj\Debug\projet_alcoolemie_3.csproj.GenerateResource.Cache
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_3\projet_alcoolemie_3\obj\Debug\projet_alcoolemie_3.exe
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_3\projet_alcoolemie_3\obj\Debug\projet_alcoolemie_3.pdb
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_3\projet_alcoolemie_3\obj\Debug\projet_alcoolemie_3.DrinkView.resources
+C:\Users\wikbergs_info\Desktop\jeudi\projet_alcoolemie_3\projet_alcoolemie_3\obj\Debug\projet_alcoolemie_3.UserDataView.resources
