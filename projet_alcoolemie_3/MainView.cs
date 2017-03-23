@@ -30,7 +30,7 @@ namespace projet_alcoolemie_3 {
                 timUpdate.Enabled = true;
             }
             else {
-                UserDataView udView = new UserDataView(MyModele);
+                UserDataView udView = new UserDataView(MyModele, true);
                 udView.ShowDialog();
             }
         }
@@ -46,6 +46,7 @@ namespace projet_alcoolemie_3 {
 
         private void UpdateView() {
             lblAlcohol.Text = String.Format("{0:0.0000}‰", MyModele.TauxAlcoolemie);
+            lblName.Text = String.Format("Bonjour, {0}", MyModele.Username);
         }
 
         private void btnBoire_Click(object sender, EventArgs e) {
@@ -55,8 +56,13 @@ namespace projet_alcoolemie_3 {
 
         private void MainView_FormClosing(object sender, FormClosingEventArgs e) {
             if (File.Exists("myModelData.xml")) {
-                //MyModele.Serialize();
+                MyModele.Serialize();
             }
+        }
+
+        private void userInfoToolStripMenuItem_Click(object sender, EventArgs e) {
+            UserDataView udView = new UserDataView(MyModele, false);
+            udView.ShowDialog();
         }
     }
 }

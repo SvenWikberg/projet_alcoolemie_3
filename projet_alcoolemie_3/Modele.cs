@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 using System.IO;
+using System.Xml.Serialization;
 
 namespace projet_alcoolemie_3 {
+
     [System.Serializable]
     public class Modele {
         public string Username {
@@ -79,11 +77,6 @@ namespace projet_alcoolemie_3 {
 
         public Modele() {
             Boissons = new List<Boisson>();
-            Boissons.Add(new Boisson("Bière", 500, 6));
-            Boissons.Add(new Boisson("Shot", 45, 40));
-            Boissons.Add(new Boisson("Verre de vin", 140, 11));
-
-
         }
 
         public void CalculerBaisseTauxAlcoolemie() {
@@ -99,7 +92,7 @@ namespace projet_alcoolemie_3 {
             TauxAlcoolemie = TauxAlcoolemie + (b.AlcoolBrute / (Poids * K));
         }
 
-        public void Serialize() { // A REPARER AVEC PROF
+        public void Serialize() { 
             FileStream fs = new FileStream("myModelData.xml", FileMode.Create);
             XmlSerializer xs = new XmlSerializer(typeof(Modele));
             xs.Serialize(fs, this);

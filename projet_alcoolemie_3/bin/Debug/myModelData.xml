@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Modele xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Username>Toto</Username>
+  <Poids>90</Poids>
+  <EstHomme>true</EstHomme>
+  <TauxAlcoolemie>4.2903778823444041</TauxAlcoolemie>
+  <DernierCalculTauxAlcoolemie>2017-03-23T14:55:04.4757344+01:00</DernierCalculTauxAlcoolemie>
+  <Boissons>
+    <Boisson>
+      <Nom>Bière</Nom>
+      <Quantite>500</Quantite>
+      <Degre>5</Degre>
+    </Boisson>
+    <Boisson>
+      <Nom>Shot</Nom>
+      <Quantite>45</Quantite>
+      <Degre>40</Degre>
+    </Boisson>
+    <Boisson>
+      <Nom>Verre de vin</Nom>
+      <Quantite>140</Quantite>
+      <Degre>11</Degre>
+    </Boisson>
+  </Boissons>
+</Modele>

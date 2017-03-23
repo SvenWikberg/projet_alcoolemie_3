@@ -30,6 +30,8 @@
             this.cbxSexe = new System.Windows.Forms.ComboBox();
             this.nudPoids = new System.Windows.Forms.NumericUpDown();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudPoids)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,11 +115,33 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(143, 408);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(129, 41);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "Fermer";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(15, 408);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(129, 41);
+            this.btnEdit.TabIndex = 7;
+            this.btnEdit.Text = "Modifier";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // UserDataView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 462);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.nudPoids);
             this.Controls.Add(this.cbxSexe);
@@ -144,5 +168,7 @@
         private System.Windows.Forms.ComboBox cbxSexe;
         private System.Windows.Forms.NumericUpDown nudPoids;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

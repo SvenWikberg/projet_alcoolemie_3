@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace projet_alcoolemie_3 {
+    [System.Serializable]
     public class Boisson {
         // Nom de la boisson
         private string _nom;
@@ -54,7 +55,7 @@ namespace projet_alcoolemie_3 {
         public double AlcoolBrute {
             get {
                 //0.8 est car 1L d'alcool pur pèse 0.8kg
-                return ((Degre * Quantite) / 1000) * 0.8;
+                return ((Degre * Quantite) / 100) * 0.8;
             }
         }
 
@@ -62,12 +63,9 @@ namespace projet_alcoolemie_3 {
         public override string ToString() {
             return String.Format("{0} - {1}ml", Nom, Quantite);
         }
-        //public new string ToString {
-        //    get {
-        //        return String.Format("{0} - {1}ml", Nom, Quantite);
-        //    }
-        //}
 
+        // pour que ca coit serializable
+        public Boisson() { }
 
         public Boisson(string nom, double quantite, double degre) {
             Nom = nom;
