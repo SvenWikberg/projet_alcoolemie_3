@@ -92,12 +92,13 @@
             // userInfoToolStripMenuItem
             // 
             this.userInfoToolStripMenuItem.Name = "userInfoToolStripMenuItem";
-            this.userInfoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.userInfoToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.userInfoToolStripMenuItem.Text = "User Info";
             this.userInfoToolStripMenuItem.Click += new System.EventHandler(this.userInfoToolStripMenuItem_Click);
             // 
             // pbxGraph
             // 
+            this.pbxGraph.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbxGraph.Location = new System.Drawing.Point(12, 212);
             this.pbxGraph.Name = "pbxGraph";
             this.pbxGraph.Size = new System.Drawing.Size(259, 148);

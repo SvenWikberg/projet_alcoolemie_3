@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -75,8 +76,31 @@ namespace projet_alcoolemie_3 {
         }
         List<Boisson> _boissons;
 
+        public List<AlcoholRateThroughTime> ListARTT {
+            get {
+                return _listARTT;
+            }
+
+            set {
+                _listARTT = value;
+            }
+        }
+        List<AlcoholRateThroughTime> _listARTT;
+
         public Modele() {
             Boissons = new List<Boisson>();
+            ListARTT = new List<AlcoholRateThroughTime>(50);
+
+            //Boissons.Add(new Boisson("Bière", 500, 6));
+            //Boissons.Add(new Boisson("Verre de vin", 140, 12));
+            //Boissons.Add(new Boisson("Sh", 45, 40));
+        }
+
+        public void AddARTT() {
+            ListARTT.Add(new AlcoholRateThroughTime(TauxAlcoolemie, DateTime.Now));
+            if (ListARTT.Count > 50) {
+                ListARTT.RemoveAt(50);
+            }
         }
 
         public void CalculerBaisseTauxAlcoolemie() {
@@ -92,7 +116,7 @@ namespace projet_alcoolemie_3 {
             TauxAlcoolemie = TauxAlcoolemie + (b.AlcoolBrute / (Poids * K));
         }
 
-        public void Serialize() { 
+        public void Serialize() {
             FileStream fs = new FileStream("myModelData.xml", FileMode.Create);
             XmlSerializer xs = new XmlSerializer(typeof(Modele));
             xs.Serialize(fs, this);
