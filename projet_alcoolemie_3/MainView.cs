@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Sven Wikberg
+ * 30 mars 2016
+ * 
+ * 
+ */
+using System;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml.Serialization;
@@ -104,6 +110,9 @@ namespace projet_alcoolemie_3 {
             return bmp;
         }
 
-
+        private void gérerLesBoissonsToolStripMenuItem_Click(object sender, EventArgs e) {
+            DrinkDataView ddView = new DrinkDataView(MyModele);
+            ddView.Show();
+        }
     }
 }

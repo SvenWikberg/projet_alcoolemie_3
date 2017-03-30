@@ -59,9 +59,8 @@ namespace projet_alcoolemie_3 {
             }
         }
 
-        // tostring
         public override string ToString() {
-            return String.Format("{0} - {1}ml", Nom, Quantite);
+            return String.Format("{0} ({1}%) - {2}ml", Nom, Degre, Quantite);
         }
 
         // pour que ca coit serializable

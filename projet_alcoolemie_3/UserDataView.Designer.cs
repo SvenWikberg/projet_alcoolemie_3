@@ -107,9 +107,9 @@
             // btnSave
             // 
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(15, 409);
+            this.btnSave.Location = new System.Drawing.Point(15, 402);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(257, 41);
+            this.btnSave.Size = new System.Drawing.Size(257, 48);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Enregistrer";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -117,9 +117,9 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(143, 408);
+            this.btnClose.Location = new System.Drawing.Point(167, 402);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(129, 41);
+            this.btnClose.Size = new System.Drawing.Size(105, 48);
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "Fermer";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -127,9 +127,9 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(15, 408);
+            this.btnEdit.Location = new System.Drawing.Point(15, 402);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(129, 41);
+            this.btnEdit.Size = new System.Drawing.Size(105, 48);
             this.btnEdit.TabIndex = 7;
             this.btnEdit.Text = "Modifier";
             this.btnEdit.UseVisualStyleBackColor = true;

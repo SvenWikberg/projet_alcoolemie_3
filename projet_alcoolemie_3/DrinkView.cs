@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Sven Wikberg
+ * 30 mars 2016
+ * 
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

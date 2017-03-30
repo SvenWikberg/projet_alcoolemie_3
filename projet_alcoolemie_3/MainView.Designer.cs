@@ -32,6 +32,7 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbxGraph = new System.Windows.Forms.PictureBox();
+            this.gérerLesBoissonsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnstrMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGraph)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +85,8 @@
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userInfoToolStripMenuItem});
+            this.userInfoToolStripMenuItem,
+            this.gérerLesBoissonsToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
@@ -104,6 +106,13 @@
             this.pbxGraph.Size = new System.Drawing.Size(259, 219);
             this.pbxGraph.TabIndex = 4;
             this.pbxGraph.TabStop = false;
+            // 
+            // gérerLesBoissonsToolStripMenuItem
+            // 
+            this.gérerLesBoissonsToolStripMenuItem.Name = "gérerLesBoissonsToolStripMenuItem";
+            this.gérerLesBoissonsToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.gérerLesBoissonsToolStripMenuItem.Text = "Gérer les boissons";
+            this.gérerLesBoissonsToolStripMenuItem.Click += new System.EventHandler(this.gérerLesBoissonsToolStripMenuItem_Click);
             // 
             // MainView
             // 
@@ -139,6 +148,7 @@
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userInfoToolStripMenuItem;
         private System.Windows.Forms.PictureBox pbxGraph;
+        private System.Windows.Forms.ToolStripMenuItem gérerLesBoissonsToolStripMenuItem;
     }
 }
 
