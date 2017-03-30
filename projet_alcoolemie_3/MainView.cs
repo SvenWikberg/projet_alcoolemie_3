@@ -82,18 +82,28 @@ namespace projet_alcoolemie_3 {
             Bitmap bmp = new Bitmap(width, height);
             Graphics g = Graphics.FromImage(bmp);
             List<Point> lstPt = new List<Point>();
+            List<Rectangle> gapRectList = new List<Rectangle>();
+            double rowWidth = (double)width / MyModele.ListARTT.Count;
+            double maxRate = 2;
 
             for (int i = 0; i < MyModele.ListARTT.Count; i++) {
-                double x = width - (width / 50) * i;
-
-                double maxRate = 2;
+                double x = width - rowWidth * i;
                 double y = (1 - (MyModele.ListARTT[MyModele.ListARTT.Count - (i + 1)].AlcoholRate / maxRate)) * height;
 
                 lstPt.Add(new Point((int)x, (int)y));
+                if (!MyModele.ListARTT[MyModele.ListARTT.Count - (i + 1)].NormalTimeGap) {
+                    //g.DrawLine(Pens.Red, new Point((int)x, 0), new Point((int)x, height));
+                    gapRectList.Add(new Rectangle((int)(x) - (int)rowWidth, 0, (int)rowWidth + 1, height));
+                }
             }
 
             g.DrawLines(Pens.Black, lstPt.ToArray());
+            if (gapRectList.Count > 0) {
+                g.FillRectangles(Brushes.Red, gapRectList.ToArray());
+            }
             return bmp;
         }
+
+
     }
 }

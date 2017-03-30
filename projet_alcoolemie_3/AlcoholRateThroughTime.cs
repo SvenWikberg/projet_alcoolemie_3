@@ -30,13 +30,25 @@ namespace projet_alcoolemie_3 {
         }
         DateTime _time;
 
+        public bool NormalTimeGap {
+            get {
+                return _normalTimeGap;
+            }
+
+            set {
+                _normalTimeGap = value;
+            }
+        }
+        bool _normalTimeGap;
+
         public AlcoholRateThroughTime() {
 
         }
 
-        public AlcoholRateThroughTime(double alcoholRate, DateTime time) {
+        public AlcoholRateThroughTime(double alcoholRate, DateTime time, bool normalTimeGap) {
             AlcoholRate = alcoholRate;
             Time = time;
+            NormalTimeGap = normalTimeGap;
         }
     }
 }

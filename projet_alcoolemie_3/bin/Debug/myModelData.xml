@@ -3,8 +3,8 @@
   <Username>Bourman</Username>
   <Poids>55</Poids>
   <EstHomme>true</EstHomme>
-  <TauxAlcoolemie>0</TauxAlcoolemie>
-  <DernierCalculTauxAlcoolemie>2017-03-30T13:44:50.7578622+02:00</DernierCalculTauxAlcoolemie>
+  <TauxAlcoolemie>0.37446932262986848</TauxAlcoolemie>
+  <DernierCalculTauxAlcoolemie>2017-03-30T15:12:45.6975715+02:00</DernierCalculTauxAlcoolemie>
   <Boissons>
     <Boisson>
       <Nom>Bière</Nom>
@@ -24,204 +24,254 @@
   </Boissons>
   <ListARTT>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:01.0710203+02:00</Time>
+      <AlcoholRate>1.6165903676298699</AlcoholRate>
+      <Time>2017-03-30T15:11:56.0127297+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:02.0850783+02:00</Time>
+      <AlcoholRate>1.59126392012987</AlcoholRate>
+      <Time>2017-03-30T15:11:57.0257876+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:03.1001363+02:00</Time>
+      <AlcoholRate>1.56593747012987</AlcoholRate>
+      <Time>2017-03-30T15:11:58.0388456+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:04.1131943+02:00</Time>
+      <AlcoholRate>1.54058602012987</AlcoholRate>
+      <Time>2017-03-30T15:11:59.0529036+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:05.1272523+02:00</Time>
+      <AlcoholRate>1.51523457012987</AlcoholRate>
+      <Time>2017-03-30T15:12:00.0669616+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:06.1413103+02:00</Time>
+      <AlcoholRate>1.48988312012987</AlcoholRate>
+      <Time>2017-03-30T15:12:01.0810196+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:07.1553683+02:00</Time>
+      <AlcoholRate>1.46268156512987</AlcoholRate>
+      <Time>2017-03-30T15:12:02.1690818+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:08.1694263+02:00</Time>
+      <AlcoholRate>1.43918022012987</AlcoholRate>
+      <Time>2017-03-30T15:12:03.1091356+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:09.1834843+02:00</Time>
+      <AlcoholRate>1.41382877012987</AlcoholRate>
+      <Time>2017-03-30T15:12:04.1231936+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:10.1975423+02:00</Time>
+      <AlcoholRate>1.38845232012987</AlcoholRate>
+      <Time>2017-03-30T15:12:05.1382516+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:11.2116003+02:00</Time>
+      <AlcoholRate>1.36312587012987</AlcoholRate>
+      <Time>2017-03-30T15:12:06.1513096+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:12.2256583+02:00</Time>
+      <AlcoholRate>1.33777442012987</AlcoholRate>
+      <Time>2017-03-30T15:12:07.1653676+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:13.2397163+02:00</Time>
+      <AlcoholRate>1.31242297012987</AlcoholRate>
+      <Time>2017-03-30T15:12:08.1794256+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:14.2537743+02:00</Time>
+      <AlcoholRate>1.28707152012987</AlcoholRate>
+      <Time>2017-03-30T15:12:09.1934836+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:15.2678323+02:00</Time>
+      <AlcoholRate>1.2617200701298699</AlcoholRate>
+      <Time>2017-03-30T15:12:10.2075416+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:16.2818903+02:00</Time>
+      <AlcoholRate>1.2363686201298698</AlcoholRate>
+      <Time>2017-03-30T15:12:11.2215996+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:17.2959483+02:00</Time>
+      <AlcoholRate>1.2110171701298698</AlcoholRate>
+      <Time>2017-03-30T15:12:12.2356576+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:18.3100063+02:00</Time>
+      <AlcoholRate>1.1856657201298697</AlcoholRate>
+      <Time>2017-03-30T15:12:13.2497156+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:19.3230642+02:00</Time>
+      <AlcoholRate>1.1603142701298697</AlcoholRate>
+      <Time>2017-03-30T15:12:14.2637736+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:20.3371222+02:00</Time>
+      <AlcoholRate>1.1349628201298696</AlcoholRate>
+      <Time>2017-03-30T15:12:15.2778316+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:21.3511802+02:00</Time>
+      <AlcoholRate>1.1096363726298697</AlcoholRate>
+      <Time>2017-03-30T15:12:16.2908895+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:22.3652382+02:00</Time>
+      <AlcoholRate>1.0842849226298696</AlcoholRate>
+      <Time>2017-03-30T15:12:17.3049475+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:23.3792962+02:00</Time>
+      <AlcoholRate>1.0589334726298696</AlcoholRate>
+      <Time>2017-03-30T15:12:18.3190055+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:24.3933542+02:00</Time>
+      <AlcoholRate>1.0335820226298695</AlcoholRate>
+      <Time>2017-03-30T15:12:19.3330635+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:25.4074122+02:00</Time>
+      <AlcoholRate>1.0082305726298695</AlcoholRate>
+      <Time>2017-03-30T15:12:20.3471215+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:26.4214702+02:00</Time>
+      <AlcoholRate>0.98287912262986943</AlcoholRate>
+      <Time>2017-03-30T15:12:21.3611795+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:27.4355282+02:00</Time>
+      <AlcoholRate>0.95752767262986938</AlcoholRate>
+      <Time>2017-03-30T15:12:22.3752375+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:28.4495862+02:00</Time>
+      <AlcoholRate>0.93217622262986932</AlcoholRate>
+      <Time>2017-03-30T15:12:23.3892955+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:29.4636442+02:00</Time>
+      <AlcoholRate>0.90682477262986927</AlcoholRate>
+      <Time>2017-03-30T15:12:24.4033535+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:30.4777022+02:00</Time>
+      <AlcoholRate>0.88147332262986922</AlcoholRate>
+      <Time>2017-03-30T15:12:25.4174115+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:31.4917602+02:00</Time>
+      <AlcoholRate>0.85612187262986916</AlcoholRate>
+      <Time>2017-03-30T15:12:26.4314695+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:32.5058182+02:00</Time>
+      <AlcoholRate>0.83077042262986911</AlcoholRate>
+      <Time>2017-03-30T15:12:27.4455275+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:33.5198762+02:00</Time>
+      <AlcoholRate>0.80541897262986906</AlcoholRate>
+      <Time>2017-03-30T15:12:28.4595855+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:34.5339342+02:00</Time>
+      <AlcoholRate>0.780067522629869</AlcoholRate>
+      <Time>2017-03-30T15:12:29.4736435+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:35.5479922+02:00</Time>
+      <AlcoholRate>0.754716072629869</AlcoholRate>
+      <Time>2017-03-30T15:12:30.4877015+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:36.5620502+02:00</Time>
+      <AlcoholRate>0.7293646226298689</AlcoholRate>
+      <Time>2017-03-30T15:12:31.5017595+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:37.5761082+02:00</Time>
+      <AlcoholRate>0.70401317262986884</AlcoholRate>
+      <Time>2017-03-30T15:12:32.5158175+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:38.5901662+02:00</Time>
+      <AlcoholRate>0.67866172262986879</AlcoholRate>
+      <Time>2017-03-30T15:12:33.5298755+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:39.6032242+02:00</Time>
+      <AlcoholRate>0.65331027262986874</AlcoholRate>
+      <Time>2017-03-30T15:12:34.5439335+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:40.6172822+02:00</Time>
+      <AlcoholRate>0.62795882262986868</AlcoholRate>
+      <Time>2017-03-30T15:12:35.5579915+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:41.6313402+02:00</Time>
+      <AlcoholRate>0.60263237262986868</AlcoholRate>
+      <Time>2017-03-30T15:12:36.5710495+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:42.6453982+02:00</Time>
+      <AlcoholRate>0.57728092262986863</AlcoholRate>
+      <Time>2017-03-30T15:12:37.5851075+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:43.6594562+02:00</Time>
+      <AlcoholRate>0.55192947262986858</AlcoholRate>
+      <Time>2017-03-30T15:12:38.5991655+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:44.6745142+02:00</Time>
+      <AlcoholRate>0.52657802262986853</AlcoholRate>
+      <Time>2017-03-30T15:12:39.6132235+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:45.6885722+02:00</Time>
+      <AlcoholRate>0.50122657262986847</AlcoholRate>
+      <Time>2017-03-30T15:12:40.6272815+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:46.7016302+02:00</Time>
+      <AlcoholRate>0.47587512262986847</AlcoholRate>
+      <Time>2017-03-30T15:12:41.6413395+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:47.7156882+02:00</Time>
+      <AlcoholRate>0.45052367262986848</AlcoholRate>
+      <Time>2017-03-30T15:12:42.6553975+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:48.7307462+02:00</Time>
+      <AlcoholRate>0.42517222262986848</AlcoholRate>
+      <Time>2017-03-30T15:12:43.6694555+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:49.7448042+02:00</Time>
+      <AlcoholRate>0.39982077262986848</AlcoholRate>
+      <Time>2017-03-30T15:12:44.6835135+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
     <AlcoholRateThroughTime>
-      <AlcoholRate>0</AlcoholRate>
-      <Time>2017-03-30T13:44:50.7578622+02:00</Time>
+      <AlcoholRate>0.37446932262986848</AlcoholRate>
+      <Time>2017-03-30T15:12:45.6975715+02:00</Time>
+      <NormalTimeGap>true</NormalTimeGap>
     </AlcoholRateThroughTime>
   </ListARTT>
 </Modele>

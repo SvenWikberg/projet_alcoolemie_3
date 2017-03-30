@@ -9,7 +9,8 @@ namespace projet_alcoolemie_3 {
     [System.Serializable]
     public class Modele {
 
-        const double ACLOHOL_DECREASING = 50; // en ‰ (pour mille) par heures, en vrai c'est 0.15
+        const double ACLOHOL_DECREASING = 0.15 * 60 * 10; // en ‰ (pour mille) par heures, en vrai c'est 0.15
+        const int NORMAL_GAP_TIME = 2; // en secondes
 
         public string Username {
             get {
@@ -103,7 +104,16 @@ namespace projet_alcoolemie_3 {
         }
 
         public void AddARTT() {
-            ListARTT.Add(new AlcoholRateThroughTime(TauxAlcoolemie, DateTime.Now));
+            DateTime now = DateTime.Now;
+            TimeSpan span = now.Subtract(ListARTT[49].Time);
+
+            if (span.TotalSeconds > NORMAL_GAP_TIME) {
+                ListARTT.Add(new AlcoholRateThroughTime(TauxAlcoolemie, DateTime.Now, false));
+            }
+            else {
+                ListARTT.Add(new AlcoholRateThroughTime(TauxAlcoolemie, DateTime.Now, true));
+            }
+
             if (ListARTT.Count >= 50) {
                 ListARTT.RemoveAt(0);
             }
