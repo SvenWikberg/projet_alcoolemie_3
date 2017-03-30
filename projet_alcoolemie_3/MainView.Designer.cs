@@ -99,9 +99,9 @@
             // pbxGraph
             // 
             this.pbxGraph.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pbxGraph.Location = new System.Drawing.Point(12, 212);
+            this.pbxGraph.Location = new System.Drawing.Point(12, 179);
             this.pbxGraph.Name = "pbxGraph";
-            this.pbxGraph.Size = new System.Drawing.Size(259, 148);
+            this.pbxGraph.Size = new System.Drawing.Size(259, 219);
             this.pbxGraph.TabIndex = 4;
             this.pbxGraph.TabStop = false;
             // 

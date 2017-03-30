@@ -8,6 +8,9 @@ namespace projet_alcoolemie_3 {
 
     [System.Serializable]
     public class Modele {
+
+        const double ACLOHOL_DECREASING = 50; // en ‰ (pour mille) par heures, en vrai c'est 0.15
+
         public string Username {
             get {
                 return _username;
@@ -49,6 +52,9 @@ namespace projet_alcoolemie_3 {
             set {
                 if (value >= 0) {
                     _tauxAlcoolemie = value;
+                }
+                else {
+                    _tauxAlcoolemie = 0;
                 }
             }
         }
@@ -98,8 +104,8 @@ namespace projet_alcoolemie_3 {
 
         public void AddARTT() {
             ListARTT.Add(new AlcoholRateThroughTime(TauxAlcoolemie, DateTime.Now));
-            if (ListARTT.Count > 50) {
-                ListARTT.RemoveAt(50);
+            if (ListARTT.Count >= 50) {
+                ListARTT.RemoveAt(0);
             }
         }
 
@@ -107,7 +113,7 @@ namespace projet_alcoolemie_3 {
             DateTime now = DateTime.Now;
             TimeSpan span = now.Subtract(DernierCalculTauxAlcoolemie);
             double nbHeures = span.TotalHours;
-            TauxAlcoolemie = TauxAlcoolemie - (nbHeures * 0.15);
+            TauxAlcoolemie = TauxAlcoolemie - (nbHeures * ACLOHOL_DECREASING);
             DernierCalculTauxAlcoolemie = now;
         }
 
@@ -122,5 +128,7 @@ namespace projet_alcoolemie_3 {
             xs.Serialize(fs, this);
             fs.Close();
         }
+
+
     }
 }

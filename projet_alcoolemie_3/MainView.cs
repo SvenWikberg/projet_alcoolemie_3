@@ -8,6 +8,7 @@ using System.Collections.Generic;
 namespace projet_alcoolemie_3 {
     public partial class MainView : Form {
 
+        int cmptGC = 0;
         public Modele MyModele {
             get {
                 return _myModele;
@@ -46,6 +47,12 @@ namespace projet_alcoolemie_3 {
             MyModele.AddARTT();
 
             UpdateView();
+
+            if (cmptGC >= 60) {
+                System.GC.Collect();
+                cmptGC = 0;
+            }
+            cmptGC++;
         }
 
         private void UpdateView() {
@@ -78,7 +85,9 @@ namespace projet_alcoolemie_3 {
 
             for (int i = 0; i < MyModele.ListARTT.Count; i++) {
                 double x = width - (width / 50) * i;
-                double y = (height / 100) * MyModele.TauxAlcoolemie * 100;
+
+                double maxRate = 2;
+                double y = (1 - (MyModele.ListARTT[MyModele.ListARTT.Count - (i + 1)].AlcoholRate / maxRate)) * height;
 
                 lstPt.Add(new Point((int)x, (int)y));
             }
