@@ -45,10 +45,11 @@ namespace projet_alcoolemie_3 {
         }
 
         private void MainView_Load(object sender, EventArgs e) {
+            timUpdate.Interval = 17; //temps reel = 1000
             UpdateView();
         }
 
-        private void timUpdate_Tick(object sender, EventArgs e) {
+        private void timUpdate_Tick(object sender, EventArgs e) { 
             MyModele.CalculerBaisseTauxAlcoolemie();
             MyModele.AddARTT();
 
@@ -65,7 +66,50 @@ namespace projet_alcoolemie_3 {
             pbxGraph.Image = PaintGraph(pbxGraph.Width, pbxGraph.Height);
 
             lblAlcohol.Text = String.Format("{0:0.0000}‰", MyModele.TauxAlcoolemie);
-            lblName.Text = String.Format("Bonjour, {0}", MyModele.Username);
+            lblName.Text = String.Format("{0}", MyModele.Username);
+
+            int tmpTimeToDrive = MyModele.GetTimeToRate(MyModele.GET_ALCOHOL_DRIVING_MAX_CH);
+            if (tmpTimeToDrive > 0) {
+                if (tmpTimeToDrive / 3600 > 0) {
+                    lblDrive.Text = String.Format("Vous pourrez couduire dans {0} heures, {1} minutes et {2} secondes",
+                        tmpTimeToDrive / 3600,
+                        (tmpTimeToDrive % 3600) / 60,
+                        tmpTimeToDrive % 60);
+                }
+                else if (tmpTimeToDrive / 60 > 0) {
+                    lblDrive.Text = String.Format("Vous pourrez couduire dans {0} minutes et {1} secondes",
+                        tmpTimeToDrive / 60,
+                        tmpTimeToDrive % 60);
+                }
+                else {
+                    lblDrive.Text = String.Format("Vous pourrez couduire dans {0} secondes", tmpTimeToDrive);
+                }
+            }
+            else {
+                lblDrive.Text = "Vous pouvez conduire";
+            }
+
+            int tmpTimeToSober = MyModele.GetTimeToRate(0);
+            if (tmpTimeToSober > 0) {
+                if (tmpTimeToSober / 3600 > 0) {
+                    lblSober.Text = String.Format("Vous serez sobre dans {0} heures, {1} minutes et {2} secondes",
+                        tmpTimeToSober / 3600,
+                        (tmpTimeToSober % 3600) / 60,
+                        tmpTimeToSober % 60);
+                }
+                else if (tmpTimeToSober / 60 > 0) {
+                    lblSober.Text = String.Format("Vous serez sobre dans {0} minutes et {1} secondes",
+                        tmpTimeToSober / 60,
+                        tmpTimeToSober % 60);
+                }
+                else {
+                    lblSober.Text = String.Format("Vous serez sobre dans {0} secondes",
+                        tmpTimeToSober);
+                }
+            }
+            else {
+                lblSober.Text = "Vous êtes sobre";
+            }
         }
 
         private void btnBoire_Click(object sender, EventArgs e) {
@@ -89,6 +133,7 @@ namespace projet_alcoolemie_3 {
             Graphics g = Graphics.FromImage(bmp);
             List<Point> lstPt = new List<Point>();
             List<Rectangle> gapRectList = new List<Rectangle>();
+
             double rowWidth = (double)width / MyModele.ListARTT.Count;
             double maxRate = 2;
 
@@ -99,11 +144,13 @@ namespace projet_alcoolemie_3 {
                 lstPt.Add(new Point((int)x, (int)y));
                 if (!MyModele.ListARTT[MyModele.ListARTT.Count - (i + 1)].NormalTimeGap) {
                     //g.DrawLine(Pens.Red, new Point((int)x, 0), new Point((int)x, height));
-                    gapRectList.Add(new Rectangle((int)(x) - (int)rowWidth, 0, (int)rowWidth + 1, height));
+                    gapRectList.Add(new Rectangle((int)(x) - (int)rowWidth - 1, 0, rowWidth < 2 ?  2 : (int)rowWidth, height));
                 }
             }
 
+
             g.DrawLines(Pens.Black, lstPt.ToArray());
+            g.DrawLine(Pens.Blue, new Point(0, height - (int)(MyModele.GET_ALCOHOL_DRIVING_MAX_CH / maxRate * height)), new Point(width, height - (int)(MyModele.GET_ALCOHOL_DRIVING_MAX_CH / maxRate * height)));
             if (gapRectList.Count > 0) {
                 g.FillRectangles(Brushes.Red, gapRectList.ToArray());
             }

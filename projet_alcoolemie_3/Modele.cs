@@ -15,8 +15,15 @@ namespace projet_alcoolemie_3 {
     [System.Serializable]
     public class Modele {
 
-        const double ACLOHOL_DECREASING = 0.15 * 60 * 10; // en ‰ (pour mille) par heures, en vrai c'est 0.15
-        const int NORMAL_GAP_TIME = 2; // en secondes
+        public double GET_ALCOHOL_DRIVING_MAX_CH {
+            get {
+                return ALCOHOL_DRIVING_MAX_CH;
+            }
+        }
+        const double ALCOHOL_DRIVING_MAX_CH = 0.5; // en ‰ (pour mille)
+
+        const double ALCOHOL_DECREASING = 0.15 * 60; // en ‰ (pour mille) par heures, en vrai c'est 0.15
+        const int NORMAL_GAP_TIME = 2; //                    en secondes
 
         public string Username {
             get {
@@ -111,16 +118,18 @@ namespace projet_alcoolemie_3 {
 
         public void AddARTT() {
             DateTime now = DateTime.Now;
-            TimeSpan span = now.Subtract(ListARTT[49].Time);
+            TimeSpan span = now.Subtract(ListARTT[ListARTT.Count - 1].Time);
 
-            if (span.TotalSeconds > NORMAL_GAP_TIME) {
-                ListARTT.Add(new AlcoholRateThroughTime(TauxAlcoolemie, DateTime.Now, false));
-            }
-            else {
-                ListARTT.Add(new AlcoholRateThroughTime(TauxAlcoolemie, DateTime.Now, true));
+            while (ListARTT.Count < 500) {
+                if (span.TotalSeconds > NORMAL_GAP_TIME) {
+                    ListARTT.Add(new AlcoholRateThroughTime(TauxAlcoolemie, DateTime.Now, false));
+                }
+                else {
+                    ListARTT.Add(new AlcoholRateThroughTime(TauxAlcoolemie, DateTime.Now, true));
+                }
             }
 
-            if (ListARTT.Count >= 50) {
+            while (ListARTT.Count >= 500) {
                 ListARTT.RemoveAt(0);
             }
         }
@@ -129,7 +138,7 @@ namespace projet_alcoolemie_3 {
             DateTime now = DateTime.Now;
             TimeSpan span = now.Subtract(DernierCalculTauxAlcoolemie);
             double nbHeures = span.TotalHours;
-            TauxAlcoolemie = TauxAlcoolemie - (nbHeures * ACLOHOL_DECREASING);
+            TauxAlcoolemie = TauxAlcoolemie - (nbHeures * ALCOHOL_DECREASING);
             DernierCalculTauxAlcoolemie = now;
         }
 
@@ -145,6 +154,20 @@ namespace projet_alcoolemie_3 {
             fs.Close();
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="rate"></param>
+        /// <returns>temps en secondes</returns>
+        public int GetTimeToRate(double rate) {
+            if (TauxAlcoolemie < rate) {
+                return -1;
+            }
+            else {
+                double alcoholDecreasingSec = 0.15 / (60 * 60);
+                double tmp = (TauxAlcoolemie - rate) / alcoholDecreasingSec;
+                return (int)tmp;
+            }
+        }
     }
 }
