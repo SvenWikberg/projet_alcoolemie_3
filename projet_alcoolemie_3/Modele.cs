@@ -14,15 +14,21 @@ namespace projet_alcoolemie_3 {
 
     [System.Serializable]
     public class Modele {
-        private const int NB_ARTT = 600;
+        private const int NB_ARTT = 600; // nombre max d'ARTT dans ListARTT
         private const double ALCOHOL_DECREASING = 0.15 * 60; // en ‰ (pour mille) par heures, en vrai c'est 0.15
 
+        /// <summary>
+        /// taux d’alcoolémie maximum pour conduire en Suisse
+        /// </summary>
         public double ALCOHOL_DRIVING_MAX_CH {
             get {
                 return 0.5;
             }
         }
 
+        /// <summary>
+        /// nom de l'utilisateur
+        /// </summary>
         public string Username {
             get {
                 return _username;
@@ -34,6 +40,9 @@ namespace projet_alcoolemie_3 {
         }
         private string _username;
 
+        /// <summary>
+        /// poids de l'utilisateur
+        /// </summary>
         public int Poids {
             get {
                 return _poids;
@@ -45,6 +54,9 @@ namespace projet_alcoolemie_3 {
         }
         private int _poids;
 
+        /// <summary>
+        /// sexe de l'utilisateur
+        /// </summary>
         public bool EstHomme {
             get {
                 return _estHomme;
@@ -56,6 +68,9 @@ namespace projet_alcoolemie_3 {
         }
         private bool _estHomme;
 
+        /// <summary>
+        /// taux d’alcoolémie de l’utilisateur en temps réel
+        /// </summary>
         public double TauxAlcoolemie {
             get {
                 return _tauxAlcoolemie;
@@ -72,6 +87,9 @@ namespace projet_alcoolemie_3 {
         }
         private double _tauxAlcoolemie;
 
+        /// <summary>
+        /// date du dernier calcul taux alcoolemie
+        /// </summary>
         public DateTime DernierCalculTauxAlcoolemie {
             get {
                 return _dernierCalculTauxAlcoolemie;
@@ -83,6 +101,9 @@ namespace projet_alcoolemie_3 {
         }
         private DateTime _dernierCalculTauxAlcoolemie;
 
+        /// <summary>
+        /// liste des boissons dans l'application
+        /// </summary>
         public List<Boisson> Boissons {
             get {
                 return _boissons;
@@ -94,6 +115,9 @@ namespace projet_alcoolemie_3 {
         }
         private List<Boisson> _boissons;
 
+        /// <summary>
+        /// liste des taux d'alcoolemie à travers le temps
+        /// </summary>
         public List<AlcoholRateThroughTime> ListARTT {
             get {
                 return _listARTT;
@@ -114,6 +138,10 @@ namespace projet_alcoolemie_3 {
             //Boissons.Add(new Boisson("Sh", 45, 40));
         }
 
+        /// <summary>
+        /// mets le bon nombre (NB_ARTT) d'ARTT dans la liste et enleve le plus vieux ARTT afin de faire
+        /// une sorte de roulement
+        /// </summary>
         public void AddARTT() {
             DateTime now = DateTime.Now;
             TimeSpan span = now.Subtract(ListARTT[ListARTT.Count - 1].Time);
@@ -132,6 +160,9 @@ namespace projet_alcoolemie_3 {
             }
         }
 
+        /// <summary>
+        /// calcul le nouveau taux d'alcolémie par rapport au DernierCalculTauxAlcoolemie
+        /// </summary>
         public void CalculerBaisseTauxAlcoolemie() {
             DateTime now = DateTime.Now;
             TimeSpan span = now.Subtract(DernierCalculTauxAlcoolemie);
@@ -140,6 +171,10 @@ namespace projet_alcoolemie_3 {
             DernierCalculTauxAlcoolemie = now;
         }
 
+        /// <summary>
+        /// ajoute au taux d’alcoolémie l’alcool contenu dans la boisson « b »
+        /// </summary>
+        /// <param name="b">boisson que l'utilisateur veut boire</param>
         public void BoireUneBoisson(Boisson b) {
             double K = (EstHomme ? 0.7 : 0.6);
             TauxAlcoolemie = TauxAlcoolemie + (b.AlcoolBrute / (Poids * K));
@@ -153,9 +188,9 @@ namespace projet_alcoolemie_3 {
         }
 
         /// <summary>
-        /// 
+        /// récupère le temps, en secondes, qui faudra afin d’arriver au taux d’alcoolémie « rate »
         /// </summary>
-        /// <param name="rate"></param>
+        /// <param name="rate">taux auquel on veut savoir le temps qu'il faudra pour y arriver</param>
         /// <returns>temps en secondes</returns>
         public int GetTimeToRate(double rate) {
             if (TauxAlcoolemie < rate) {
