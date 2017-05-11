@@ -17,7 +17,7 @@ namespace projet_alcoolemie_3 {
         }
         bool _isChanging;
 
-        public Modele MyModele {
+        private Modele MyModele {
             get {
                 return _myModele;
             }
@@ -64,7 +64,7 @@ namespace projet_alcoolemie_3 {
                 tbxUsername.Hide();
                 cbxSexe.Hide();
                 nudPoids.Hide();
-                lblUsername.Text = "Username: " + MyModele.Username;
+                lblUsername.Text = "Username : " + MyModele.Username;
                 lblSexe.Text = "Sexe : " + (MyModele.EstHomme ? "Homme" : "Femme");
                 lblPoids.Text = "Poids : " + MyModele.Poids.ToString() + " kg";
             }

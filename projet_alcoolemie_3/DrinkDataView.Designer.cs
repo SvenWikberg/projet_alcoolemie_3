@@ -119,6 +119,12 @@
             // 
             // nudDegree
             // 
+            this.nudDegree.DecimalPlaces = 1;
+            this.nudDegree.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.nudDegree.Location = new System.Drawing.Point(205, 336);
             this.nudDegree.Name = "nudDegree";
             this.nudDegree.Size = new System.Drawing.Size(67, 20);
@@ -166,6 +172,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 462);
+            this.ControlBox = false;
             this.Controls.Add(this.btnComfirmEdit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblQuantity);

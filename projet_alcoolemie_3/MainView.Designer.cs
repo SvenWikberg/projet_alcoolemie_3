@@ -35,15 +35,18 @@
             this.pbxGraph = new System.Windows.Forms.PictureBox();
             this.lblDrive = new System.Windows.Forms.Label();
             this.lblSober = new System.Windows.Forms.Label();
+            this.cbxBoissons = new System.Windows.Forms.ComboBox();
+            this.gbxDrink = new System.Windows.Forms.GroupBox();
             this.mnstrMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGraph)).BeginInit();
+            this.gbxDrink.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(12, 33);
+            this.lblName.Location = new System.Drawing.Point(12, 24);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(97, 34);
             this.lblName.TabIndex = 0;
@@ -53,7 +56,7 @@
             // 
             this.lblAlcohol.AutoSize = true;
             this.lblAlcohol.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlcohol.Location = new System.Drawing.Point(12, 76);
+            this.lblAlcohol.Location = new System.Drawing.Point(12, 58);
             this.lblAlcohol.Name = "lblAlcohol";
             this.lblAlcohol.Size = new System.Drawing.Size(105, 40);
             this.lblAlcohol.TabIndex = 1;
@@ -66,9 +69,9 @@
             // 
             // btnBoire
             // 
-            this.btnBoire.Location = new System.Drawing.Point(13, 419);
+            this.btnBoire.Location = new System.Drawing.Point(6, 63);
             this.btnBoire.Name = "btnBoire";
-            this.btnBoire.Size = new System.Drawing.Size(259, 31);
+            this.btnBoire.Size = new System.Drawing.Size(246, 31);
             this.btnBoire.TabIndex = 2;
             this.btnBoire.Text = "Boire";
             this.btnBoire.UseVisualStyleBackColor = true;
@@ -110,7 +113,7 @@
             // pbxGraph
             // 
             this.pbxGraph.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pbxGraph.Location = new System.Drawing.Point(12, 134);
+            this.pbxGraph.Location = new System.Drawing.Point(12, 92);
             this.pbxGraph.Name = "pbxGraph";
             this.pbxGraph.Size = new System.Drawing.Size(259, 219);
             this.pbxGraph.TabIndex = 4;
@@ -119,7 +122,7 @@
             // lblDrive
             // 
             this.lblDrive.AutoSize = true;
-            this.lblDrive.Location = new System.Drawing.Point(16, 356);
+            this.lblDrive.Location = new System.Drawing.Point(10, 314);
             this.lblDrive.Name = "lblDrive";
             this.lblDrive.Size = new System.Drawing.Size(35, 13);
             this.lblDrive.TabIndex = 5;
@@ -128,26 +131,46 @@
             // lblSober
             // 
             this.lblSober.AutoSize = true;
-            this.lblSober.Location = new System.Drawing.Point(15, 369);
+            this.lblSober.Location = new System.Drawing.Point(9, 327);
             this.lblSober.Name = "lblSober";
             this.lblSober.Size = new System.Drawing.Size(35, 13);
             this.lblSober.TabIndex = 6;
             this.lblSober.Text = "label2";
+            // 
+            // cbxBoissons
+            // 
+            this.cbxBoissons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxBoissons.FormattingEnabled = true;
+            this.cbxBoissons.Location = new System.Drawing.Point(6, 19);
+            this.cbxBoissons.Name = "cbxBoissons";
+            this.cbxBoissons.Size = new System.Drawing.Size(246, 21);
+            this.cbxBoissons.TabIndex = 7;
+            // 
+            // gbxDrink
+            // 
+            this.gbxDrink.Controls.Add(this.cbxBoissons);
+            this.gbxDrink.Controls.Add(this.btnBoire);
+            this.gbxDrink.Location = new System.Drawing.Point(13, 350);
+            this.gbxDrink.Name = "gbxDrink";
+            this.gbxDrink.Size = new System.Drawing.Size(258, 100);
+            this.gbxDrink.TabIndex = 8;
+            this.gbxDrink.TabStop = false;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 462);
+            this.Controls.Add(this.gbxDrink);
+            this.Controls.Add(this.pbxGraph);
             this.Controls.Add(this.lblSober);
             this.Controls.Add(this.lblDrive);
-            this.Controls.Add(this.pbxGraph);
-            this.Controls.Add(this.btnBoire);
             this.Controls.Add(this.lblAlcohol);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.mnstrMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.mnstrMain;
+            this.MaximizeBox = false;
             this.Name = "MainView";
             this.Text = "Alcohol";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainView_FormClosing);
@@ -155,6 +178,7 @@
             this.mnstrMain.ResumeLayout(false);
             this.mnstrMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGraph)).EndInit();
+            this.gbxDrink.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,6 +197,8 @@
         private System.Windows.Forms.ToolStripMenuItem gérerLesBoissonsToolStripMenuItem;
         private System.Windows.Forms.Label lblDrive;
         private System.Windows.Forms.Label lblSober;
+        private System.Windows.Forms.ComboBox cbxBoissons;
+        private System.Windows.Forms.GroupBox gbxDrink;
     }
 }
 

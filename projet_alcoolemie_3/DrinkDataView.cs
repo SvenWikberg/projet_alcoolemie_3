@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace projet_alcoolemie_3 {
     public partial class DrinkDataView : Form {
-        public Modele MyModele {
+        private Modele MyModele {
             get {
                 return _myModele;
             }
@@ -70,9 +70,16 @@ namespace projet_alcoolemie_3 {
             btnComfirmEdit.Enabled = (tbxName.Text != "");
         }
 
-        public void UpdateView() {
+        private void UpdateView() {
             lbxBoissons.DataSource = null;
             lbxBoissons.DataSource = MyModele.Boissons;
+
+            if (MyModele.Boissons.Count > 0) {
+                btnEdit.Enabled = true;
+            }
+            else {
+                btnEdit.Enabled = false;
+            }
         }
 
         private void btnComfirmEdit_Click(object sender, EventArgs e) {

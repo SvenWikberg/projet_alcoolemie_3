@@ -39,6 +39,13 @@ namespace projet_alcoolemie_3 {
                 _normalTimeGap = value;
             }
         }
+
+        public static int NORMAL_GAP_TIME {   //                    en secondes
+            get {
+                return 2;
+            }
+        }
+
         bool _normalTimeGap;
 
         public AlcoholRateThroughTime() {

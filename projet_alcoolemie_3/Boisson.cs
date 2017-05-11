@@ -63,7 +63,7 @@ namespace projet_alcoolemie_3 {
             return String.Format("{0} ({1}%) - {2}ml", Nom, Degre, Quantite);
         }
 
-        // pour que ca coit serializable
+        // pour que ca soit serializable
         public Boisson() { }
 
         public Boisson(string nom, double quantite, double degre) {

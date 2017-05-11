@@ -14,16 +14,14 @@ namespace projet_alcoolemie_3 {
 
     [System.Serializable]
     public class Modele {
+        private const int NB_ARTT = 600;
+        private const double ALCOHOL_DECREASING = 0.15 * 60; // en ‰ (pour mille) par heures, en vrai c'est 0.15
 
-        public double GET_ALCOHOL_DRIVING_MAX_CH {
+        public double ALCOHOL_DRIVING_MAX_CH {
             get {
-                return ALCOHOL_DRIVING_MAX_CH;
+                return 0.5;
             }
         }
-        const double ALCOHOL_DRIVING_MAX_CH = 0.5; // en ‰ (pour mille)
-
-        const double ALCOHOL_DECREASING = 0.15 * 60; // en ‰ (pour mille) par heures, en vrai c'est 0.15
-        const int NORMAL_GAP_TIME = 2; //                    en secondes
 
         public string Username {
             get {
@@ -34,7 +32,7 @@ namespace projet_alcoolemie_3 {
                 _username = value;
             }
         }
-        string _username;
+        private string _username;
 
         public int Poids {
             get {
@@ -45,7 +43,7 @@ namespace projet_alcoolemie_3 {
                 _poids = value;
             }
         }
-        int _poids;
+        private int _poids;
 
         public bool EstHomme {
             get {
@@ -56,7 +54,7 @@ namespace projet_alcoolemie_3 {
                 _estHomme = value;
             }
         }
-        bool _estHomme;
+        private bool _estHomme;
 
         public double TauxAlcoolemie {
             get {
@@ -72,7 +70,7 @@ namespace projet_alcoolemie_3 {
                 }
             }
         }
-        double _tauxAlcoolemie;
+        private double _tauxAlcoolemie;
 
         public DateTime DernierCalculTauxAlcoolemie {
             get {
@@ -83,7 +81,7 @@ namespace projet_alcoolemie_3 {
                 _dernierCalculTauxAlcoolemie = value;
             }
         }
-        DateTime _dernierCalculTauxAlcoolemie;
+        private DateTime _dernierCalculTauxAlcoolemie;
 
         public List<Boisson> Boissons {
             get {
@@ -94,7 +92,7 @@ namespace projet_alcoolemie_3 {
                 _boissons = value;
             }
         }
-        List<Boisson> _boissons;
+        private List<Boisson> _boissons;
 
         public List<AlcoholRateThroughTime> ListARTT {
             get {
@@ -105,7 +103,7 @@ namespace projet_alcoolemie_3 {
                 _listARTT = value;
             }
         }
-        List<AlcoholRateThroughTime> _listARTT;
+        private List<AlcoholRateThroughTime> _listARTT;
 
         public Modele() {
             Boissons = new List<Boisson>();
@@ -120,8 +118,8 @@ namespace projet_alcoolemie_3 {
             DateTime now = DateTime.Now;
             TimeSpan span = now.Subtract(ListARTT[ListARTT.Count - 1].Time);
 
-            while (ListARTT.Count < 500) {
-                if (span.TotalSeconds > NORMAL_GAP_TIME) {
+            while (ListARTT.Count < NB_ARTT) {
+                if (span.TotalSeconds > AlcoholRateThroughTime.NORMAL_GAP_TIME) {
                     ListARTT.Add(new AlcoholRateThroughTime(TauxAlcoolemie, DateTime.Now, false));
                 }
                 else {
@@ -129,7 +127,7 @@ namespace projet_alcoolemie_3 {
                 }
             }
 
-            while (ListARTT.Count >= 500) {
+            while (ListARTT.Count >= NB_ARTT) {
                 ListARTT.RemoveAt(0);
             }
         }

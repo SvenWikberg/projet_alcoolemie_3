@@ -15,7 +15,7 @@ namespace projet_alcoolemie_3 {
     public partial class MainView : Form {
 
         int cmptGC = 0;
-        public Modele MyModele {
+        private Modele MyModele {
             get {
                 return _myModele;
             }
@@ -46,6 +46,7 @@ namespace projet_alcoolemie_3 {
 
         private void MainView_Load(object sender, EventArgs e) {
             timUpdate.Interval = 17; //temps reel = 1000
+            cbxBoissons.DataSource = MyModele.Boissons;
             UpdateView();
         }
 
@@ -68,7 +69,7 @@ namespace projet_alcoolemie_3 {
             lblAlcohol.Text = String.Format("{0:0.0000}‰", MyModele.TauxAlcoolemie);
             lblName.Text = String.Format("{0}", MyModele.Username);
 
-            int tmpTimeToDrive = MyModele.GetTimeToRate(MyModele.GET_ALCOHOL_DRIVING_MAX_CH);
+            int tmpTimeToDrive = MyModele.GetTimeToRate(MyModele.ALCOHOL_DRIVING_MAX_CH);
             if (tmpTimeToDrive > 0) {
                 if (tmpTimeToDrive / 3600 > 0) {
                     lblDrive.Text = String.Format("Vous pourrez couduire dans {0} heures, {1} minutes et {2} secondes",
@@ -113,8 +114,7 @@ namespace projet_alcoolemie_3 {
         }
 
         private void btnBoire_Click(object sender, EventArgs e) {
-            DrinkView dView = new DrinkView(MyModele);
-            dView.Show();
+            MyModele.BoireUneBoisson((Boisson)cbxBoissons.SelectedItem);
         }
 
         private void MainView_FormClosing(object sender, FormClosingEventArgs e) {
@@ -128,7 +128,7 @@ namespace projet_alcoolemie_3 {
             udView.ShowDialog();
         }
 
-        public Bitmap PaintGraph(int width, int height) {
+        private Bitmap PaintGraph(int width, int height) {
             Bitmap bmp = new Bitmap(width, height);
             Graphics g = Graphics.FromImage(bmp);
             List<Point> lstPt = new List<Point>();
@@ -150,7 +150,7 @@ namespace projet_alcoolemie_3 {
 
 
             g.DrawLines(Pens.Black, lstPt.ToArray());
-            g.DrawLine(Pens.Blue, new Point(0, height - (int)(MyModele.GET_ALCOHOL_DRIVING_MAX_CH / maxRate * height)), new Point(width, height - (int)(MyModele.GET_ALCOHOL_DRIVING_MAX_CH / maxRate * height)));
+            g.DrawLine(Pens.Blue, new Point(0, height - (int)(MyModele.ALCOHOL_DRIVING_MAX_CH / maxRate * height)), new Point(width, height - (int)(MyModele.ALCOHOL_DRIVING_MAX_CH / maxRate * height)));
             if (gapRectList.Count > 0) {
                 g.FillRectangles(Brushes.Red, gapRectList.ToArray());
             }
@@ -161,5 +161,7 @@ namespace projet_alcoolemie_3 {
             DrinkDataView ddView = new DrinkDataView(MyModele);
             ddView.Show();
         }
+
+
     }
 }
